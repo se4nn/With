@@ -43,9 +43,12 @@ p, a {
   max-width: 100%;
 }
 
-.email {
+.email-container {
   position: absolute;
   bottom: 40px;
+}
+
+.email {
   text-decoration: none;
   border-bottom: 4px solid #1f2638;
 }
