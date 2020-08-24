@@ -46,4 +46,6 @@ p, a {
 .email {
   position: absolute;
   bottom: 40px;
+  text-decoration: none;
+  border-bottom: 4px solid #1f2638;
 }
