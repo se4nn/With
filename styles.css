@@ -15,19 +15,20 @@ body {
   width: 100vw;
   min-height: 100vh;
   margin: 0;
-  background: url('./background.png') center;
+  background: #FFEFE1;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
-p {
+p, a {
   font-family: 'Garbata', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
-  line-height: 38px;
+  font-size: 24px;
+  line-height: 32px;
   text-align: center;
   color: #1F2638;
   margin-top: 24px;
@@ -40,4 +41,9 @@ p {
 
 .logo {
   max-width: 100%;
+}
+
+.email {
+  position: absolute;
+  bottom: 40px;
 }
