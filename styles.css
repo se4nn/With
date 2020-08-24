@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Garbata';
+  font-weight: 500;
+  font-display: block;
+  src: url('./fonts/garbata_medium.woff2') format('woff2'), url('./fonts/garbata_medium.woff') format('woff');
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  background: url('./background.png') center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-family: 'Garbata', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  color: #1F2638;
+  margin-top: 24px;
+}
+
+.logo-container {
+    width: auto;
+    max-width: 90vw;
+}
+
+.logo {
+  max-width: 100%;
+}
