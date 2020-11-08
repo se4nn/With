@@ -68,6 +68,11 @@ form {
   flex-wrap: wrap;
 }
 
+.emailoctopus-form-row-hp {
+  position: absolute;
+  left: -5000px;
+}
+
 .email-container {
   max-width: 480px;
   width: 100%;
