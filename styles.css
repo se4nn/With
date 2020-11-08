@@ -9,7 +9,7 @@
   font-family: 'Benzin';
   font-weight: 400;
   font-display: block;
-  src: url('./fonts/Benzin-Regular.ttf') format('ttf');
+  src: url('./fonts/Benzin-Regular.otf') format('otf');
 }
 
 * {
