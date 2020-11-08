@@ -63,11 +63,6 @@ p, a {
   width: 100%;
 }
 
-.emailoctopus-success-message, .emailoctopus-error-message {
-  display: none;
-}
-
-
 form {
   display: flex;
   flex-wrap: wrap;

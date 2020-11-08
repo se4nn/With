@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./styles.css">
   <link rel='shortcut icon' href='./favicon.png' type='image/png'/ >
-  <script src="https://emailoctopus.com/bundles/emailoctopuslist/js/1.6/form-recaptcha.js"></script>
   <script src="https://emailoctopus.com/bundles/emailoctopuslist/js/1.6/form-embed.js"></script>
   
 </head>
@@ -23,13 +22,9 @@
       <h2>Subscribe to be the first in the line</h2>
 
       <div class="emailoctopus-form-wrapper emailoctopus-form-default null">
-      <p class="emailoctopus-success-message">
-      </p>
-      <p class="emailoctopus-error-message">
-      </p>
       <form action="https://emailoctopus.com/lists/0ab49f1e-206d-11eb-a3d0-06b4694bee2a/members/embedded/1.3s/add"
         method="post"
-        data-message-success="Thanks for subscribing!"
+        data-message-success="Woo! You're in line. You'll be the first to know when we launch!"
         data-message-missing-email-address="Your email address is required."
         data-message-invalid-email-address="Your email address doesn't look right, please try again."
         data-message-bot-submission-error="Hmm, we've detected that this doesn't look like a human submission."
@@ -53,5 +48,7 @@
           <button type="submit">Subscribe</button>
         </div>
       </form>
+      <p class="emailoctopus-success-message"></p>
+      <p class="emailoctopus-error-message"></p>
     </div>
 </body>
