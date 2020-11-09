@@ -81,12 +81,16 @@ form {
   min-width: 300px;
 }
 
-input[type=email] {
+input[type=email], button[type=submit] {
   background: none;
-  font-family: Archia-Regular;
+  font-family: 'Archia', monospace;
+  font-weight: 400;
   font-size: 20px;
-  color: #121621;
   line-height: 32px;
+}
+
+input[type=email] {
+  color: #121621;
   padding: 24px 16px;
   width: calc(100% - 32px);
   outline: none;
@@ -95,10 +99,7 @@ input[type=email] {
 
 button[type=submit] {
   border: none;
-  font-family: Archia-Regular;
-  font-size: 20px;
   color: #FFFFFF;
-  line-height: 32px;
   padding: 24px 32px;
   background: url(./button_background.svg) repeat-x ;
   background-size: auto 100%;
