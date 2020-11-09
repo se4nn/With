@@ -2,14 +2,14 @@
   font-family: 'Archia';
   font-weight: 400;
   font-display: block;
-  src: url('./fonts/Archia-Regular.otf') format('otf');
+  src: url('./fonts/Archia-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Benzin';
   font-weight: 400;
   font-display: block;
-  src: url('./fonts/Benzin-Regular.otf') format('otf');
+  src: url('./fonts/Benzin-Regular.otf') format('opentype');
 }
 
 * {
@@ -28,7 +28,7 @@ body {
 }
 
 h2 {
-  font-family: 'Benzin-Regular', sans-serif;
+  font-family: 'Benzin', sans-serif;
   font-size: 24px;
   color: #1F2638;
   line-height: 40px;
