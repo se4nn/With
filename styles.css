@@ -241,4 +241,13 @@ footer a {
   #success + .with-animated-text {
     display: block;
   }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer p, footer a {
+    margin-right: 16px;
+    margin-left: 0;
+  }
 }
