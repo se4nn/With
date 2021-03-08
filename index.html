@@ -14,27 +14,45 @@
 <body>
   <div class="intro">
     <img class="logo" src="./bottle_cap.png" alt="With Logo">
-    <h1>We’re With, and we’re building the social way to drink.</h1>
+    <h1 class="bold">We’re With, and we’re building the social way to drink.</h1>
     <p>We’re making drinks designed to include everyone, with all the flavour, with all of your friends and with none of the alcohol.</p>
     <div class="with-animated-text"></div>
   </div>
-  <form name="submit-to-google-sheet">
+  <div id="form" class="form-container">
     <p>Drop your name and number below to be one of our first tasters.</p>
-    <label for="name">What’s your name?</label>
-    <input name="name" type="text" placeholder="Jeff Goldblum" required>
-    <label for="name">And your mobile number?</label>
-    <input name="phone_number" type="tel" placeholder="07977 777777" pattern="((\+44(\s\(0\)\s|\s0\s|\s)?)|0)7\d{3}(\s)?\d{6}" required>
-    <button type="submit">Sign up to be one of our tasters</button>
-  </form>
-  <div class="with-animated-text"></div>
+    <form name="submit-to-google-sheet">
+      <label for="name">What’s your name?</label>
+      <input name="name" type="text" placeholder="Jeff Goldblum" required>
+      <label for="name">And your mobile number?</label>
+      <input name="phone_number" type="tel" placeholder="07977 777777" pattern="((\+44(\s\(0\)\s|\s0\s|\s)?)|0)7\d{3}(\s)?\d{6}" required>
+      <button type="submit" onclick="showSpinner()"><span id="button-content">Sign up to be one of our tasters</span><span id="spinner">&nbsp;</span></button>
+    </form>
+  </div>
+  <div id="success">
+    <p class="bold">You're in! We can't wait for you to try With!</p>
+    <p>We will be in touch soon to tell you more about our journey and why we're building this business.</p>
+    <p>Until then, why not spread the joy and share With with someone you know?</p>
+    <a class="bold" href="https://withdrinks.com">withdrinks.com</a>
+  </div>
   <script>
+    function showSpinner () {
+      document.getElementById("button-content").style.display = "none";
+      document.getElementById("spinner").style.display = "block";
+    }
+
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwy2Q7DCE2d1Aof-XcJCBU2BMKGFSBiYrpX4dqC2D5e5N9y4LyADZ8Dxe-1koExsClOoA/exec'
     const form = document.forms['submit-to-google-sheet']
-  
+
     form.addEventListener('submit', e => {
       e.preventDefault()
+
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
+        .then(
+          function showSuccess() {
+            document.getElementById("success").style.display = "block";
+            document.getElementById("form").style.display = "none";
+          }
+        )
         .catch(error => console.error('Error!', error.message))
     })
   </script>
