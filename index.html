@@ -10,42 +10,33 @@
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./styles.css">
   <link rel='shortcut icon' href='./favicon.png' type='image/png'/ >
-  <script src="https://emailoctopus.com/bundles/emailoctopuslist/js/1.6/form-embed.js"></script>
-  
 </head>
 <body>
-  <img class="logo" src="./logo.svg" alt="With Logo">
-  <img src="./sober_not_boring.svg" alt="Sober Not Boring" class="snb">
-  <div class="contents">
-    <p>We’re building a social way to drink. With all the flavour, all the fun and none of the alcohol.</p>
+  <div class="intro">
+    <img class="logo" src="./bottle_cap.png" alt="With Logo">
+    <h1>We’re With, and we’re building the social way to drink.</h1>
+    <p>We’re making drinks designed to include everyone, with all the flavour, with all of your friends and with none of the alcohol.</p>
+    <div class="with-animated-text"></div>
   </div>
-  <h2>Subscribe to be the first in the line</h2>
+  <form name="submit-to-google-sheet">
+    <p>Drop your name and number below to be one of our first tasters.</p>
+    <label for="name">What’s your name?</label>
+    <input name="name" type="text" placeholder="Jeff Goldblum" required>
+    <label for="name">And your mobile number?</label>
+    <input name="phone_number" type="tel" placeholder="07977 777777" pattern="((\+44(\s\(0\)\s|\s0\s|\s)?)|0)7\d{3}(\s)?\d{6}" required>
+    <button type="submit">Sign up to be one of our tasters</button>
+  </form>
+  <div class="with-animated-text"></div>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwy2Q7DCE2d1Aof-XcJCBU2BMKGFSBiYrpX4dqC2D5e5N9y4LyADZ8Dxe-1koExsClOoA/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
-  <div class="emailoctopus-form-wrapper emailoctopus-form-default null">
-    <p class="emailoctopus-success-message"></p>
-    <p class="emailoctopus-error-message"></p>
-
-    <form action="https://emailoctopus.com/lists/0ab49f1e-206d-11eb-a3d0-06b4694bee2a/members/embedded/1.3/add"
-      method="post"
-      data-message-success="Woo! You're in line. You'll be the first to know when we launch!"
-      data-message-missing-email-address="Your email address is required."
-      data-message-invalid-email-address="Your email address doesn't look right, please try again."
-      data-message-bot-submission-error="Hmm, we've detected that this doesn't look like a human submission."
-      data-message-consent-required="Please check the checkbox to indicate your consent."
-      data-message-invalid-parameters-error="We're missing some information."
-      data-message-unknown-error="Sorry, an unknown error has occurred. Please try again later."
-      class="emailoctopus-form"
-    >
-      <div class="emailoctopus-form-row email-container">
-        <input id="field_0" name="field_0" type="email" placeholder="Email address" required="required">
-      </div>
-      <div aria-hidden="true" class="emailoctopus-form-row-hp">
-        <input type="text" name="hpc4b27b6e-eb38-11e9-be00-06b4694bee2a" tabindex="-1"autocomplete="nope">
-      </div>
-      <div class="emailoctopus-form-row-subscribe">
-        <input type="hidden" name="successRedirectUrl">
-        <button type="submit">Subscribe</button>
-      </div>
-    </form>
-  </div>
 </body>

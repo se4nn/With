@@ -1,15 +1,15 @@
 @font-face {
-  font-family: 'Archia';
-  font-weight: 400;
+  font-family: 'Hagrid';
+  font-weight: 500;
   font-display: block;
-  src: url('./fonts/Archia-Regular.otf') format('opentype');
+  src: url('./fonts/HagridMedium.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'Benzin';
-  font-weight: 400;
+  font-family: 'Hagrid';
+  font-weight: 300;
   font-display: block;
-  src: url('./fonts/Benzin-Regular.otf') format('opentype');
+  src: url('./fonts/HagridLight.otf') format('opentype');
 }
 
 * {
@@ -19,147 +19,164 @@
 }
 
 body {
-  margin: 6vw 8vw;
-  background: url(./shape.svg) no-repeat top right #FFEFE1;
+  margin: 0 auto;
+  padding: 80px 16px;
+  background: url(./background.png) no-repeat center center #121621;
+  background-size: cover;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-h2 {
-  font-family: 'Benzin', sans-serif;
-  font-size: 24px;
-  color: #1F2638;
-  line-height: 40px;
-  font-weight: 400;
-  margin-bottom: 16px;
-}
-
-p, a {
-  font-family: 'Archia', monospace;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  color: #1F2638;
-  margin-bottom: 40px;
-}
-
-.logo {
-  width: 144px;
-  height: auto;
-}
-
-.snb {
-  margin: 80px 0 -20vh -8px;
-  width: 66.6vw;
-}
-
-.contents {
-  max-width: 33.3vw;
-}
-
-.emailoctopus-form-wrapper {
-  width: 100%;
-}
-
-form {
-  display: flex;
+  width: calc(100% - 32px);
+  max-width: 960px;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.emailoctopus-form-row-hp {
-  position: absolute;
-  left: -5000px;
+h1, p {
+  font-family: 'Hagrid';
+  font-size: 24px;
+  color: #FAF3EC;
+  line-height: 40px;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 
-.email-container {
-  max-width: 480px;
-  width: 100%;
-  position: relative;
-  margin-right: 16px;
-  min-width: 300px;
+p {
+  font-family: 'Hagrid';
+  font-size: 24px;
+  color: #FAF3EC;
+  line-height: 40px;
+  font-weight: 300;
+  margin-bottom: 8px
 }
 
-input[type=email], button[type=submit] {
-  background: none;
-  font-family: 'Archia', monospace;
-  font-weight: 400;
-  font-size: 20px;
+.intro {
+  max-width: calc(50% - 80px);
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin: 0 0 40px -8px;
+  align-self: flex-start;
+}
+
+label {
+  font-family: 'Hagrid';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FAF3EC;
+  display: block;
+  margin-bottom: 8px;
+}
+
+form {
+  max-width: calc(50% - 80px);
+  background: #121621;
+  padding: 40px;
+  border-radius: 8px;
+  margin-top: 120px;
+}
+
+input, button {
+  border-radius: 4px;
+  font-family: 'Hagrid';
+  font-size: 16px;
   line-height: 32px;
 }
 
-input[type=email] {
-  color: #121621;
-  padding: 24px 16px;
-  width: calc(100% - 32px);
-  outline: none;
-  border-image: url('./email_field_background.svg') 16 / 24px;
+input {
+  background: #121621;
+  border: 1px solid #FAF3EC;
+  color: #FAF3EC;
+  padding: 12px;
+  margin-bottom: 24px;
+  width: calc(100% - 26px);
+  font-weight: 300;
 }
 
-button[type=submit] {
+button {
+  background: #FAF3EC;
+  border-radius: 4px;
+  padding: 16px;
+  width: 100%;
   border: none;
-  color: #FFFFFF;
-  padding: 24px 32px;
-  background: url(./button_background.svg) repeat-x ;
-  background-size: auto 100%;
+  color:#121621;
+  font-weight: 500;
 }
 
-.grecaptcha-badge {
-  visibility: hidden;
+.with-animated-text {
+  width: 308px;
+  height: 80px;
+  background-size: contain !important;
+  -webkit-animation: animated-text 6s infinite;
+  -moz-animation: animated-text 6s infinite;
+  animation: animated-text 6s infinite;
+  margin: 40px 0;
+}
+
+@-webkit-keyframes animated-text {
+  0% {
+    background: url('./text_1.png');
+  }
+  32% {
+    background: url('./text_1.png');
+  }
+  33% {
+    background: url('./text_2.png');
+  }
+  65% {
+    background: url('./text_2.png');
+  }
+  66% {
+    background: url('./text_3.png');
+  }
+  99% {
+    background: url('./text_3.png');
+  }
+  100% {
+    background: url('./text_1.png');
+  }
+}
+
+form + .with-animated-text {
+  display: none;
 }
 
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 1080px) {
 
-  .snb {
-    margin: 80px 0 -16vh;
-  }
-
-  .email-container {
-    max-width: 400px;
-    min-width: 0;
-  }
+  
 
 }
 
 @media only screen and (max-width: 720px) {
 
   body {
-    margin: 24px;
-    background-size: 50%;
+    flex-direction: column;
   }
 
-  .logo {
-    width: 120px;
+  .intro, form {
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  form {
+    background: none;
+    padding: 0;;
   }
 
-  .contents {
-    max-width: 60%;
+  .intro .with-animated-text {
+    display: none;
   }
 
-  .snb {
-    width: 100%;
-    margin: 64px 0 -10vh;
+  form + .with-animated-text {
+    display: block;
   }
-
-  .email-container, input[type=email], .emailoctopus-form-row-subscribe, button[type=submit] {
-    width: 100%;
-    max-width: none;
-    margin: 0 0 8px 0;
-  }
-
-  input[type=email] {
-    max-width: calc(100% - 32px);
-  }
-
 }
 
 @media only screen and (max-width: 480px) {
 
-  .snb {
-    margin: 40px 0 -8vh;
-  }
+
 
 }
