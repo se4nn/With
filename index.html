@@ -11,15 +11,15 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel='shortcut icon' href='./favicon.png' type='image/png'/ >
 </head>
-<body>
+<body class="home">
   <div class="intro">
     <img class="logo" src="./bottle_cap.png" alt="With Logo">
     <h1 class="bold">We’re With, and we’re building the social way to drink.</h1>
-    <p>We’re making drinks designed to include everyone, with all the flavour, with all of your friends and with none of the alcohol.</p>
+    <p class="large">We’re making drinks designed to include everyone, with all the flavour, with all of your friends and with none of the alcohol.</p>
     <div class="with-animated-text"></div>
   </div>
   <div id="form" class="form-container">
-    <p>Drop your name and number below to be one of our first tasters.</p>
+    <p class="large">Drop your name and number below to be one of our first tasters.</p>
     <form name="submit-to-google-sheet">
       <label for="name">What’s your name?</label>
       <input name="name" type="text" placeholder="Jeff Goldblum" required>
@@ -29,10 +29,10 @@
     </form>
   </div>
   <div id="success">
-    <p class="bold">You're in! We can't wait for you to try With!</p>
-    <p>We will be in touch soon to tell you more about our journey and why we're building this business.</p>
-    <p>Until then, why not spread the joy and share With with someone you know?</p>
-    <a class="bold" href="https://withdrinks.com">withdrinks.com</a>
+    <p class="bold large">You're in! We can't wait for you to try With!</p>
+    <p class="large">We will be in touch soon to tell you more about our journey and why we're building this business.</p>
+    <p class="large">Until then, why not spread the joy and share With with someone you know?</p>
+    <a class="bold large" href="https://withdrinks.com">withdrinks.com</a>
   </div>
   <script>
     function showSpinner () {
@@ -56,5 +56,13 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+
+  <footer>
+    <p>All content © of With Drinks Limited</p>
+    <div class="footer-links">
+      <a href="./tos.html">Terms of Service</a>
+      <a href="./privacy.html">Privacy Policy</a>
+    </div>
+  </footer>
 
 </body>

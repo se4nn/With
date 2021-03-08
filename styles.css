@@ -16,6 +16,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
+  font-family: 'Hagrid';
+  line-height: 1.6;
 }
 
 body {
@@ -23,6 +25,9 @@ body {
   padding: 80px 16px;
   background: url(./background.png) no-repeat center center #121621;
   background-size: cover;
+}
+
+.home {
   display: flex;
   width: calc(100% - 32px);
   max-width: 960px;
@@ -30,16 +35,27 @@ body {
   flex-wrap: wrap;
 }
 
-h1, p, a {
-  font-family: 'Hagrid';
+h1, h2, h3, p.large, a.large {
   font-size: clamp(16px, 5vw, 24px);
+}
+
+h1, h2, h3, p, a {
+  font-family: 'Hagrid';
   color: #FAF3EC;
-  line-height: 1.6;
   margin-bottom: 8px;
 }
 
-p {
+p, ol {
   font-weight: 300;
+  font-size: 16px;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li {
+  margin-bottom: 8px;
 }
 
 .bold {
@@ -174,13 +190,27 @@ button {
 	100% {transform: rotate(360deg)}
 }
 
-/* MEDIA QUERIES */
-
-@media only screen and (max-width: 1080px) {
-
-  
-
+footer {
+  width: 100%;
+  padding: 80px 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+
+footer p, footer a {
+  font-size: 12px;
+}
+
+footer a {
+  margin-left: 16px;
+}
+
+.terms {
+  max-width: 560px;
+}
+
+/* MEDIA QUERIES */
 
 @media only screen and (max-width: 720px) {
 
@@ -211,10 +241,4 @@ button {
   #success + .with-animated-text {
     display: block;
   }
-}
-
-@media only screen and (max-width: 480px) {
-
-
-
 }
